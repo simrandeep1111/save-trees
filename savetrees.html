@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           body{
+  text-align:center;
+  background-color: bisque;
+ 
+}
+
+#p1{
+  word-spacing:10px;
+  font-size: 80px;
+  font-variant: small-caps;
+  color:blue;
+}
+ 
+#image1, #image2, #image3, #image4, #image5{
+  border-style: solid;
+  border-color:palevioletred;
+  border-width: 5px; 
+  border-radius: 20px;
+  padding : 5px;
+  width: 700px;
+  height:500px;
+}
+
+#image1{
+  border-image: url(https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/w-qjCHPZbeXCQ-unsplash.jpg) 30 round;
+}
+
+#reason1, #reason2, #reason3, #reason4, #reason5{
+  text-align: center;
+ font-size:60px;
+  color: brown;
+}
+button{
+  width: 85px;
+  height: 70px;
+  font-size: 17px;
+  color: black;
+}
+  h3{
+    font-size: 30px;
+  }         
+        </style>
+       
+
+        <title>Save trees</title>
+    </head>
+    <body>
+        <p id="p1">Save Trees</p>
+        <h3>Here are five reasons to Save Trees</h3>
+        <p id="reason1">1. Trees beautify space</p>
+        <img id ="image1" src="https://www.loveyourlandscape.org/media/83503/southern-botanical-inc.jpg?width=569&height=320">
+        <br><br>
+        <button onclick="nextSlide()"type="button">Next</button>
+
+        <script>
+        var reason=['2. Trees help prevent soil erosion','3. Trees help capture rainwater','4. Trees provide habitat for wildlife ','5. Trees provide food','1. Trees beautify space'];
+var image=['https://treesunlimitednj.com/wp-content/uploads/tree-root-system.jpg',
+'https://ars.els-cdn.com/content/image/1-s2.0-S0959378017300134-fx1.jpg',
+'https://www.plt.org/stuff/contentmgr/files/1/1862aed73c5a110aae99091a21d52cb3/misc/trees_as_habitats.jpg',
+'https://d3f9k0n15ckvhe.cloudfront.net/wp-content/uploads/2013/07/Apple-trees-sm.jpg',
+'https://www.loveyourlandscape.org/media/83503/southern-botanical-inc.jpg?width=569&height=320'];
+
+var i=0;
+function nextSlide(){
+  document.getElementById("reason1").innerHTML= reason[i];
+  document.getElementById("image1"). src=image[i];
+  i++;
+  if (i==5){
+    i=0;
+  }
+}
+        </script>
+
+
+     
+ </body>
+</html>
